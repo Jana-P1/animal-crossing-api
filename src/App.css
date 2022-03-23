@@ -1,15 +1,27 @@
-.fossil-container {
+.fossil-container, .villager-container {
   margin: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
 }
-.fossil {
+.fossil, .villager {
   border: 2px solid black;
   border-radius: 12px;
-  width: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 200px;
+  align-items: center;
   text-align: center;
   padding: 10px;
 }
+.fossil > img, .villager > img {
+  width: 75%;
+}
+.fossil > p {
+  text-align: left;
+}
+
+
 
