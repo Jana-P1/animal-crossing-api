@@ -4,17 +4,21 @@ import { getFossils } from "../../services/api-calls";
 
 
 const FossilList = (props) => {
-  const[fossils, setFossils] = useState([])
+  const [fossils, setFossils] = useState([])
 
   useEffect(() => {
     getFossils()
-    .then(fossilData => setFossils(fossilData))
+      .then(fossilData => setFossils(fossilData))
   }, [])
 
-  return ( 
+  return (
     <>
       <h2>Fossil List Page</h2>
-      <Fossil />
+      <div className="fossil-container">
+        {fossils.map(fossil =>
+          <Fossil key={fossil.image_uri} fossil={fossil} />
+        )}
+      </div>
     </>
   );
 }
