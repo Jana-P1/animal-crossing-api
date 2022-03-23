@@ -4,13 +4,13 @@ import { getFossils } from "../../services/api-calls";
 
 
 const FossilList = (props) => {
-  const[fossils, setFossils] = useState({})
+  const[fossils, setFossils] = useState([])
 
   useEffect(() => {
     getFossils()
-    .then(fossilData => console.log(fossilData))
+    .then(fossilData => setFossils(fossilData))
   }, [])
-  
+
   return ( 
     <>
       <h2>Fossil List Page</h2>

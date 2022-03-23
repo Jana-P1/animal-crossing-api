@@ -1,4 +1,4 @@
-const BASE_URL = 'http://acnhapi.com/v1'
+const BASE_URL = 'https://acnhapi.com/v1a'
 
 export function getFossils() {
   return fetch (`${BASE_URL}/fossils`)
